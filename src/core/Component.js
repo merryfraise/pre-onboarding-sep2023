@@ -1,8 +1,8 @@
 export default class Component {
-  $target;
+  $parent;
 
-  constructor($target) {
-    this.$target = $target;
+  constructor($parent) {
+    this.$parent = $parent;
     this.render();
   }
 
@@ -13,7 +13,7 @@ export default class Component {
   }
 
   render() {
-    this.$target.innerHTML = this.template();
+    this.$parent.innerHTML = this.template();
     this.mounted();
   }
 }
